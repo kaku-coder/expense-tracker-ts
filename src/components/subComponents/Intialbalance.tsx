@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Intialbalance = () => {
-    const [Balance, setBalance] = useState<Number>("")
+    const [Balance, setBalance] = useState<string>('')
+    const navigate = useNavigate()
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setBalance(e.target.value)
     }
 
-
+    const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        navigate('/')
+    }
 
     return (
-        <form onSubmit={(e) => e.preventDefault()} className='h-full w-full flex flex-col items-center justify-between py-2 text-white gap-4'>
+        <form onSubmit={handleSubmit} className='h-full w-full flex flex-col items-center justify-between py-2 text-white gap-4'>
             {/* Wallet Setup Icon & Header */}
             <div className='flex flex-col items-center text-center gap-2 mt-1'>
                 <div className='w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-2xl shadow-inner'>
