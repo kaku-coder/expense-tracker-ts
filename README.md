@@ -92,6 +92,12 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommen
 
 ---
 
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+---
+
 ## 👤 Author
 
 Developed with ❤️ by **[kaku-coder](https://github.com/kaku-coder)**.
